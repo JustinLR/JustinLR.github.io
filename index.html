@@ -4,91 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Portfolio</title>
+    <meta name="description" content="Justin L. Richards - Software Developer Portfolio">
+    <meta name="author" content="Justin L. Richards">
+    <meta property="og:title" content="Justin L. Richards - Software Developer Portfolio">
+    <meta property="og:description" content="Explore projects, skills, and connect with Justin L. Richards, a passionate software developer.">
+    <meta property="og:image" content="assets/preview.jpg">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-section">
-            <h1 class="fade-in">Hi, I'm <span class="highlight">Justin L. Richards</span></h1>
-            <p class="fade-in">Software Developer | Tech Enthusiast | Problem Solver</p>
-            <a href="#projects" class="cta fade-in">View My Work</a>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="section fade-in">
-            <h2>About Me</h2>
-            <p>
-                I'm a passionate software developer with experience in building modern, responsive web applications. 
-                I enjoy solving complex problems and learning new technologies.
-            </p>
-            <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
-        </section>
-
-        <section id="skills" class="section fade-in">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">React</div>
-                <div class="skill">Node.js</div>
-                <div class="skill">Python</div>
+    <canvas id="matrix"></canvas>
+    <div class="content">
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero-section">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Justin L. Richards</span></h1>
+                <p class="fade-in">Software Developer | Tech Enthusiast | Problem Solver</p>
+                <a href="#projects" class="cta fade-in">View My Work</a>
             </div>
-        </section>
+        </header>
 
-        <section id="projects" class="section fade-in">
-            <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="project slide-up">
-                    <img src="project1.jpg" alt="Authors Toolbox">
-                    <h3>Authors Toolbox</h3>
-                    <p>The Author's Toolbox is designed to assist authors in their writing process. It provides various tools and features to help with character creation, book organization, and text summarization.
+        <main>
+            <section id="about" class="section fade-in">
+                <h2>About Me</h2>
+                <p>
+                    I'm a passionate software developer with experience in building modern, responsive web applications. 
+                    I enjoy solving complex problems and learning new technologies.
+                </p>
+                <img src="your-photo.jpg" alt="Your Photo" class="profile-photo" onerror="this.style.display='none'">
+            </section>
 
-</p>
-                    <a href="#" target="https://github.com/JustinLR/Authors-Toolbox">View Project</a>
+            <section id="skills" class="section fade-in">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">Node.js</div>
+                    <div class="skill">Python</div>
                 </div>
-                <div class="project slide-up">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>A brief description of the project.</p>
-                    <a href="#" target="_blank">View Project</a>
+            </section>
+
+            <section id="projects" class="section fade-in">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project slide-up">
+                        <img src="project1.jpg" alt="Authors Toolbox" loading="lazy">
+                        <h3>Authors Toolbox</h3>
+                        <p>The Author's Toolbox is designed to assist authors in their writing process. It provides various tools and features to help with character creation, book organization, and text summarization.</p>
+                        <a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
+                    </div>
+                    <div class="project slide-up">
+                        <img src="project2.jpg" alt="Project 2" loading="lazy">
+                        <h3>Project 2</h3>
+                        <p>A brief description of the project.</p>
+                        <a href="#" target="_blank">View Project</a>
+                    </div>
                 </div>
+            </section>
+
+            <section id="contact" class="section fade-in">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Justin Richards. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/JustinLR" target="_blank" aria-label="Justin's GitHub Profile">GitHub</a>
+                <a href="https://www.linkedin.com/in/justinlrichards/" target="_blank" aria-label="Justin's LinkedIn Profile">LinkedIn</a>
             </div>
-        </section>
-
-        <section id="contact" class="section fade-in">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your Name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Your Email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Justin Richards. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/JustinLR" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/justinlrichards/" target="_blank">LinkedIn</a>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
