@@ -158,22 +158,36 @@ form button {
 }
 form button:hover {
     background: #ffcc00;
-}
 footer {
     background: #181818;
-    color: white;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px;
 }
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
 footer .social-links a {
     color: #ffd700;
-    margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
     transition: color 0.3s;
 }
+
 footer .social-links a:hover {
     color: #ffcc00;
 }
+
 
 /* Animations */
 @keyframes fadeIn {
