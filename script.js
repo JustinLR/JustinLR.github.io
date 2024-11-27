@@ -1,3 +1,4 @@
+// === Matrix Animation Logic ===
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 
@@ -44,4 +45,17 @@ setInterval(draw, 100); // Lower values make it faster, higher slows it down
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+});
+
+// === Lightbox Functionality ===
+function enlargeImage(image) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = image.src; // Use the same image source
+    lightbox.style.display = 'flex'; // Show the lightbox
+}
+
+// Close the lightbox when clicking outside the image
+document.getElementById('lightbox').addEventListener('click', function () {
+    this.style.display = 'none';
 });

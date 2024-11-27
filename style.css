@@ -42,18 +42,17 @@ body::after {
     z-index: -1;
 }
 
-/* Content Styles */
+/* Content Wrapper */
 .content {
     position: relative;
     text-align: center;
     z-index: 1;
 }
 
-
-/* Header */
+/* Header Section */
 header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 .nav-links {
@@ -68,7 +67,7 @@ header {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -84,10 +83,12 @@ header {
 
 .hero-section p {
     margin-bottom: 40px;
+    font-size: 1.2rem;
 }
 
 .hero-section .highlight {
     color: #ffd700;
+    font-weight: bold;
 }
 
 .cta {
@@ -115,11 +116,13 @@ header {
 .section h2 {
     margin-bottom: 20px;
     font-size: 2.5rem;
+    color: #ffd700;
 }
 
 .section p {
     max-width: 600px;
     margin: 0 auto 20px auto;
+    line-height: 1.8;
 }
 
 /* Profile Photo */
@@ -145,6 +148,7 @@ header {
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .skill:hover {
@@ -175,6 +179,7 @@ header {
 
 .project img {
     width: 100%;
+    border-bottom: 1px solid #333;
 }
 
 .project h3 {
@@ -185,6 +190,7 @@ header {
 
 .project p {
     padding: 10px;
+    color: #e0e0e0;
 }
 
 .project a {
@@ -194,12 +200,56 @@ header {
     background: #ffd700;
     color: #333;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
 .project a:hover {
     background: #ffcc00;
 }
+
+/* Lightbox Modal Effect */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it appears above all other content */
+}
+
+/* Enlarged Image in Lightbox */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Close Lightbox on Click */
+.lightbox:active {
+    display: none; /* Close lightbox */
+}
+
+/* Click-to-Enlarge Toolbox Image */
+.project-icon {
+    display: block;
+    margin: 10px auto;
+    width: 50px; /* Default size */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.7);
+}
+
 
 /* Contact Form */
 form {
@@ -212,9 +262,12 @@ form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #ffd700;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
     width: 100%;
     margin-bottom: 15px;
     padding: 12px;
@@ -230,14 +283,14 @@ form button {
     color: #333;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
 form button:hover {
     background: #ffcc00;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
     background: #181818;
     color: #e0e0e0;
@@ -247,6 +300,7 @@ footer {
 
 footer p {
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 footer .social-links {
@@ -261,7 +315,7 @@ footer .social-links a {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
@@ -311,5 +365,14 @@ footer .social-links a:hover {
 
     .cta {
         padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form {
+        width: 90%;
     }
 }

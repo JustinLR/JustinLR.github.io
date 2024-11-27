@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Justin L. Richards - Developer Portfolio</title>
+    
+    <!-- Meta Information -->
     <meta name="description" content="Justin L. Richards - Software Developer Portfolio">
     <meta name="author" content="Justin L. Richards">
     <meta property="og:title" content="Justin L. Richards - Software Developer Portfolio">
     <meta property="og:description" content="Explore projects, skills, and connect with Justin L. Richards, a passionate software developer.">
     <meta property="og:image" content="assets/preview.jpg">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScript -->
     <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Canvas for Matrix Background -->
     <canvas id="matrix"></canvas>
+    
+    <!-- Content Section -->
     <div class="content">
+        <!-- Header Section -->
         <header>
             <nav>
                 <ul class="nav-links">
@@ -24,6 +34,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            
+            <!-- Hero Section -->
             <div class="hero-section">
                 <h1 class="fade-in">Hi, I'm <span class="highlight">Justin L. Richards</span></h1>
                 <p class="fade-in">Software Developer | Tech Enthusiast | Problem Solver</p>
@@ -31,7 +43,9 @@
             </div>
         </header>
 
+        <!-- Main Content -->
         <main>
+            <!-- About Section -->
             <section id="about" class="section fade-in">
                 <h2>About Me</h2>
                 <p>
@@ -41,6 +55,7 @@
                 <img src="your-photo.jpg" alt="Your Photo" class="profile-photo" onerror="this.style.display='none'">
             </section>
 
+            <!-- Skills Section -->
             <section id="skills" class="section fade-in">
                 <h2>Skills</h2>
                 <div class="skills-container">
@@ -53,24 +68,39 @@
                 </div>
             </section>
 
-            <section id="projects" class="section fade-in">
-                <h2>Projects</h2>
-                <div class="projects-container">
-                    <div class="project slide-up">
-                        <img src="project1.jpg" alt="Authors Toolbox" loading="lazy">
-                        <h3>Authors Toolbox</h3>
-                        <p>The Author's Toolbox is designed to assist authors in their writing process. It provides various tools and features to help with character creation, book organization, and text summarization.</p>
-                        <a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
-                    </div>
-                    <div class="project slide-up">
-                        <img src="project2.jpg" alt="Project 2" loading="lazy">
-                        <h3>Project 2</h3>
-                        <p>A brief description of the project.</p>
-                        <a href="#" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </section>
+            <!-- Projects Section -->
+			<div class="lightbox" id="lightbox">
+				<img src="" alt="Enlarged Image" id="lightbox-image">
+			</div>
 
+			<section id="projects" class="section fade-in">
+				<h2>Projects</h2>
+				<div class="projects-container">
+					<!-- Project 1 -->
+					<div class="project slide-up">
+						<h3>Authors Toolbox</h3>
+						
+						<!-- Toolbox image with click-to-enlarge effect -->
+						<img src="assets/toolbox.png" alt="Toolbox Icon" class="project-icon" onclick="enlargeImage(this)">
+						
+						<p>
+							The Author's Toolbox is designed to assist authors in their writing process. 
+							It provides various tools and features to help with character creation, book organization, 
+							and text summarization.
+						</p>
+						<a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
+					</div>
+
+					<!-- Project 2 -->
+					<div class="project slide-up">
+						<h3>Project 2</h3>
+						<p>A brief description of the project.</p>
+						<a href="#" target="_blank">View Project</a>
+					</div>
+				</div>
+			</section>
+
+            <!-- Contact Section -->
             <section id="contact" class="section fade-in">
                 <h2>Contact Me</h2>
                 <form id="contact-form">
@@ -88,6 +118,7 @@
             </section>
         </main>
 
+        <!-- Footer Section -->
         <footer>
             <p>© 2024 Justin Richards. All rights reserved.</p>
             <div class="social-links">
