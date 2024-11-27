@@ -41,7 +41,8 @@ header {
 .cta {
     background: #ffd700;
     color: #333;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    margin-top: 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -53,6 +54,13 @@ header {
 .section {
     padding: 50px 20px;
     text-align: center;
+}
+.section h2 {
+    margin-bottom: 20px;
+}
+.section p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
 }
 .profile-photo {
     border-radius: 50%;
@@ -69,7 +77,7 @@ header {
 .skill {
     background: #007aff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.3s;
@@ -80,7 +88,7 @@ header {
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 .project {
@@ -88,7 +96,6 @@ header {
     border-radius: 5px;
     overflow: hidden;
     width: 300px;
-    text-align: left;
     background-color: #1e1e1e;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -109,7 +116,7 @@ header {
 }
 .project a {
     display: block;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     background: #ffd700;
     color: #333;
@@ -119,9 +126,39 @@ header {
 .project a:hover {
     background: #ffcc00;
 }
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #1e1e1e;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+form button {
+    background: #ffd700;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+form button:hover {
+    background: #ffcc00;
+}
 footer {
     background: #181818;
-    color: #e0e0e0;
+    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -144,7 +181,6 @@ footer .social-links a:hover {
         opacity: 1;
     }
 }
-
 .fade-in {
     animation: fadeIn 2s ease-out;
 }
@@ -159,7 +195,6 @@ footer .social-links a:hover {
         opacity: 1;
     }
 }
-
 .slide-up {
     animation: slideUp 1s ease-out;
 }
