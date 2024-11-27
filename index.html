@@ -24,54 +24,62 @@
         </div>
     </header>
 
-    <section id="about" class="section fade-in">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate software developer with experience in building modern, responsive web applications. 
-            I enjoy solving complex problems and learning new technologies.
-        </p>
-        <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
-    </section>
+    <main>
+        <section id="about" class="section fade-in">
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate software developer with experience in building modern, responsive web applications. 
+                I enjoy solving complex problems and learning new technologies.
+            </p>
+            <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
+        </section>
 
-    <section id="skills" class="section fade-in">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">React</div>
-            <div class="skill">Node.js</div>
-            <div class="skill">Python</div>
-        </div>
-    </section>
-
-    <section id="projects" class="section fade-in">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project slide-up">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A brief description of the project.</p>
-                <a href="#" target="_blank">View Project</a>
+        <section id="skills" class="section fade-in">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Python</div>
             </div>
-            <div class="project slide-up">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>A brief description of the project.</p>
-                <a href="#" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section fade-in">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <section id="projects" class="section fade-in">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project slide-up">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project slide-up">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 Your Name. All rights reserved.</p>
