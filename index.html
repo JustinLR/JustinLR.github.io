@@ -13,10 +13,18 @@
     <meta property="og:image" content="assets/preview.jpg">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/components.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="stylesheet" href="css/responsive.css">
     
     <!-- JavaScript -->
-    <script defer src="script.js"></script>
+    <script src="js/matrix.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/lightbox.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- Canvas for Matrix Background -->
@@ -69,37 +77,40 @@
             </section>
 
             <!-- Projects Section -->
-			<div class="lightbox" id="lightbox">
-				<img src="" alt="Enlarged Image" id="lightbox-image">
-			</div>
+            <section id="projects" class="section fade-in">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <div class="project slide-up">
+                        <div class="carousel">
+                            <!-- Carousel Images -->
+                            <img src="assets/image1.jpg" alt="Toolbox Image 1" class="carousel-image project-icon">
+                            <img src="assets/image2.jpg" alt="Toolbox Image 2" class="carousel-image project-icon">
+                            <img src="assets/image3.jpg" alt="Toolbox Image 3" class="carousel-image project-icon">
+                            
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control prev" onclick="changeImage(-1)">❮</button>
+                            <button class="carousel-control next" onclick="changeImage(1)">❯</button>
+                        </div>
+                        
+                        <h3>Authors Toolbox</h3>
+                        <p>
+                            The Author's Toolbox is designed to assist authors in their writing process. 
+                            It provides various tools and features to help with character creation, book organization, 
+                            and text summarization.
+                        </p>
+                        <a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </section>
 
-			<section id="projects" class="section fade-in">
-				<h2>Projects</h2>
-				<div class="projects-container">
-					<!-- Project 1 -->
-					<div class="project slide-up">
-						<h3>Authors Toolbox</h3>
-						
-						<!-- Toolbox image with click-to-enlarge effect -->
-						<img src="assets/toolbox.png" alt="Toolbox Icon" class="project-icon" onclick="enlargeImage(this)">
-						
-						<p>
-							The Author's Toolbox is designed to assist authors in their writing process. 
-							It provides various tools and features to help with character creation, book organization, 
-							and text summarization.
-						</p>
-						<a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
-					</div>
-
-					<!-- Project 2 -->
-					<div class="project slide-up">
-						<h3>Project 2</h3>
-						<p>A brief description of the project.</p>
-						<a href="#" target="_blank">View Project</a>
-					</div>
-				</div>
-			</section>
-
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-control prev" onclick="changeLightboxImage(-1)">❮</button>
+                <img src="" alt="Enlarged Image" id="lightbox-image">
+                <button class="lightbox-control next" onclick="changeLightboxImage(1)">❯</button>
+            </div>
+            
             <!-- Contact Section -->
             <section id="contact" class="section fade-in">
                 <h2>Contact Me</h2>

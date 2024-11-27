@@ -1,0 +1,48 @@
+/* lightbox.css */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 11;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.lightbox-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-control.prev {
+    left: 10px;
+}
+
+.lightbox-control.next {
+    right: 10px;
+}
