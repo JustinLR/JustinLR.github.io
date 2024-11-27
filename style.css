@@ -35,6 +35,9 @@ header {
     margin-bottom: 20px;
     animation: fadeIn 2s ease-out;
 }
+.hero-section p {
+    margin-bottom: 40px; /* Spacing below the paragraph */
+}
 .hero-section .highlight {
     color: #ffd700;
 }
