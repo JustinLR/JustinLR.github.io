@@ -19,12 +19,18 @@
 	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	<link rel="stylesheet" href="css/responsive.css">
-    
+    <link rel="stylesheet" href="css/matrix.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+	
     <!-- JavaScript -->
     <script src="js/matrix.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <script src="js/lightbox.js" defer></script>
     <script src="js/main.js" defer></script>
+	<script src="js/modal.js" defer></script>
+
 </head>
 <body>
     <!-- Canvas for Matrix Background -->
@@ -63,54 +69,103 @@
                 <img src="your-photo.jpg" alt="Your Photo" class="profile-photo" onerror="this.style.display='none'">
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="section fade-in">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">React</div>
-                    <div class="skill">Node.js</div>
-                    <div class="skill">Python</div>
-                </div>
-            </section>
+			<!-- Skills Section -->
+			<section id="skills" class="section fade-in">
+				<h2>Skills</h2>
+				<div class="skills-container">
+					<div class="skill" onclick="showModal('programming-modal')">Programming</div>
+					<div class="skill" onclick="showModal('web-dev-modal')">Web Development</div>
+					<div class="skill" onclick="showModal('data-structures-modal')">Data Structures & Algorithms</div>
+					<div class="skill" onclick="showModal('databases-modal')">Databases</div>
+					<div class="skill" onclick="showModal('problem-solving-modal')">Problem Solving</div>
+					<div class="skill" onclick="showModal('software-design-modal')">Software Design</div>
+				</div>
+			</section>
 
-            <!-- Projects Section -->
-            <section id="projects" class="section fade-in">
-                <h2>Projects</h2>
-                <div class="projects-container">
-                    <!-- Project 1 -->
-                    <div class="project slide-up">
-                        <div class="carousel">
-                            <!-- Carousel Images -->
-                            <img src="assets/image1.jpg" alt="Toolbox Image 1" class="carousel-image project-icon">
-                            <img src="assets/image2.jpg" alt="Toolbox Image 2" class="carousel-image project-icon">
-                            <img src="assets/image3.jpg" alt="Toolbox Image 3" class="carousel-image project-icon">
-                            
-                            <!-- Carousel Controls -->
-                            <button class="carousel-control prev" onclick="changeImage(-1)">❮</button>
-                            <button class="carousel-control next" onclick="changeImage(1)">❯</button>
-                        </div>
-                        
-                        <h3>Authors Toolbox</h3>
-                        <p>
-                            The Author's Toolbox is designed to assist authors in their writing process. 
-                            It provides various tools and features to help with character creation, book organization, 
-                            and text summarization.
-                        </p>
-                        <a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </section>
+			<!-- Modals -->
+			<div id="programming-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('programming-modal')">&times;</span>
+					<h2>Programming</h2>
+					<p>Languages: Python, JavaScript, C++, Java</p>
+				</div>
+			</div>
 
-            <!-- Lightbox -->
-            <div class="lightbox" id="lightbox">
-                <button class="lightbox-control prev" onclick="changeLightboxImage(-1)">❮</button>
-                <img src="" alt="Enlarged Image" id="lightbox-image">
-                <button class="lightbox-control next" onclick="changeLightboxImage(1)">❯</button>
-            </div>
-            
+			<div id="web-dev-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('web-dev-modal')">&times;</span>
+					<h2>Web Development</h2>
+					<p>Technologies: HTML, CSS, React, Node.js</p>
+				</div>
+			</div>
+
+			<div id="data-structures-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('data-structures-modal')">&times;</span>
+					<h2>Data Structures & Algorithms</h2>
+					<p>Topics: </p>
+				</div>
+			</div>
+
+			<div id="databases-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('databases-modal')">&times;</span>
+					<h2>Databases</h2>
+					<p>Technologies: SQL</p>
+				</div>
+			</div>
+
+			<div id="problem-solving-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('problem-solving-modal')">&times;</span>
+					<h2>Problem Solving</h2>
+					<p>Tools: Competitive Programming, Debugging, Code Optimization</p>
+				</div>
+			</div>
+
+			<div id="software-design-modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="hideModal('software-design-modal')">&times;</span>
+					<h2>Software Design</h2>
+					<p>Concepts: </p>
+				</div>
+			</div>
+
+
+			<section id="projects" class="section fade-in">
+				<h2>Projects</h2>
+				<div class="projects-container">
+					<!-- Project 1 -->
+					<div class="project slide-up">
+						<div class="carousel">
+							<!-- Carousel Images -->
+							<img src="assets/image1.png" alt="Toolbox Image 1" class="carousel-image project-icon active" onclick="enlargeImage(this)">
+							<img src="assets/image2.png" alt="Toolbox Image 2" class="carousel-image project-icon" onclick="enlargeImage(this)">
+							<img src="assets/image3.png" alt="Toolbox Image 3" class="carousel-image project-icon" onclick="enlargeImage(this)">
+							
+							<!-- Carousel Controls -->
+							<button class="carousel-control prev" onclick="changeImage(-1)">❮</button>
+							<button class="carousel-control next" onclick="changeImage(1)">❯</button>
+						</div>
+						
+						<h3>Authors Toolbox</h3>
+						<p>
+							The Author's Toolbox is designed to assist authors in their writing process. 
+							It provides various tools and features to help with character creation, book organization, 
+							and text summarization.
+						</p>
+						<a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
+					</div>
+				</div>
+
+				<!-- Lightbox for Enlarged Images -->
+				<div class="lightbox" id="lightbox">
+					<button class="lightbox-control prev" onclick="changeLightboxImage(-1)">❮</button>
+					<img src="" alt="Enlarged Image" id="lightbox-image">
+					<button class="lightbox-control next" onclick="changeLightboxImage(1)">❯</button>
+				</div>
+			</section>
+
             <!-- Contact Section -->
             <section id="contact" class="section fade-in">
                 <h2>Contact Me</h2>

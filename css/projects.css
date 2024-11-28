@@ -1,0 +1,51 @@
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project {
+    width: 300px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.project h3 {
+    background: #007aff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.project p {
+    padding: 15px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.project a {
+    display: block;
+    background: #ffd700;
+    color: #333;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.project a:hover {
+    background: #ffcc00;
+}

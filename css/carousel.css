@@ -1,12 +1,9 @@
-/* carousel.css */
+/* Carousel Styling */
 .carousel {
     position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .carousel-image {
@@ -15,13 +12,15 @@
     max-height: 200px;
     object-fit: cover;
     display: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .carousel-image.active {
     display: block;
+    opacity: 1;
 }
 
+/* Carousel Controls */
 .carousel-control {
     position: absolute;
     top: 50%;
