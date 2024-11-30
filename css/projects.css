@@ -1,19 +1,25 @@
 /* Projects Section */
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 30px; /* Space between items */
+    justify-content: center; /* Center the items within the container */
     padding: 20px;
 }
 
 .project {
-    width: 300px;
+    max-width: 350px; /* Limit the maximum width of each project */
+    width: 100%; /* Allow flexibility for smaller screens */
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly between elements */
+    align-items: center;
+    height: 400px; /* Set a fixed height for each project card */
 }
 
 .project:hover {
@@ -27,12 +33,15 @@
     padding: 10px;
     text-align: center;
     font-size: 1.2rem;
+    width: 100%; /* Ensure the heading spans the full project width */
 }
 
 .project p {
-    padding: 15px;
     color: #e0e0e0;
     line-height: 1.6;
+    margin: 15px 0;
+    text-align: center;
+    flex-grow: 1; /* Allow the paragraph to grow and take available space */
 }
 
 .project a {
@@ -44,8 +53,18 @@
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
+    width: 100%; /* Ensure buttons span the full project width */
+    flex-grow: 0; /* Prevent the button from growing */
 }
 
 .project a:hover {
     background: #ffcc00;
+}
+
+/* Optional: Style for images within projects */
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #333;
 }

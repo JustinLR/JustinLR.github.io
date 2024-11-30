@@ -14,6 +14,20 @@ header {
     margin-bottom: 40px;
 }
 
+/* Ensure bullet points show up for unordered lists */
+ul {
+    list-style-type: disc; /* Show bullet points */
+    margin-left: 20px; /* Add space to the left of the list items */
+}
+
+/* Style for horizontal line */
+hr.divider {
+    border: 0;
+    border-top: 1px solid white; /* Thicker white line */
+    margin: 20px 0; /* Spacing above and below the line */
+    width: 100%; /* Ensure the line spans the full width of the container */
+}
+
 .nav-links a {
     color: #e0e0e0;
     text-decoration: none;

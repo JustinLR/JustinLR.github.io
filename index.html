@@ -135,26 +135,36 @@
 			<section id="projects" class="section fade-in">
 				<h2>Projects</h2>
 				<div class="projects-container">
-					<!-- Project 1 -->
+					
+					<!-- Project 1: Author's Toolbox -->
 					<div class="project slide-up">
 						<div class="carousel">
-							<!-- Carousel Images -->
 							<img src="assets/image1.png" alt="Toolbox Image 1" class="carousel-image project-icon active" onclick="enlargeImage(this)">
 							<img src="assets/image2.png" alt="Toolbox Image 2" class="carousel-image project-icon" onclick="enlargeImage(this)">
 							<img src="assets/image3.png" alt="Toolbox Image 3" class="carousel-image project-icon" onclick="enlargeImage(this)">
-							
-							<!-- Carousel Controls -->
 							<button class="carousel-control prev" onclick="changeImage(-1)">❮</button>
 							<button class="carousel-control next" onclick="changeImage(1)">❯</button>
 						</div>
-						
 						<h3>Authors Toolbox</h3>
 						<p>
 							The Author's Toolbox, created with Flutter and powered by Dart, is designed to assist authors in their writing process. It offers a range of tools and features to aid with character creation, book organization, and text summarization.
 						</p>
 						<a href="https://github.com/JustinLR/Authors-Toolbox" target="_blank">View Project</a>
 					</div>
-				</div>
+
+					<!-- Python Scripts Collection -->
+					<div class="project slide-up">
+						<h3>Python Scripts Collection</h3>
+						<p>
+							A collection of Python scripts to automate common tasks:
+						</p>
+						<hr class="divider"> <!-- Horizontal line -->
+						<ul>
+							<li><strong>Backup to Backblaze</strong>: A script for backing up important files to Backblaze B2 Cloud Storage, ensuring safe, off-site file storage.</li>
+							<li><strong>File Sorter</strong>: A script to clean up and organize files in a directory, moving them into categorized folders based on their extensions, with a GUI built using Tkinter.</li>
+						</ul>
+						<a href="https://github.com/JustinLR/Python-Scripts-Collection" target="_blank">View Scripts</a>
+					</div>
 
 				<!-- Lightbox for Enlarged Images -->
 				<div class="lightbox" id="lightbox">
@@ -163,6 +173,7 @@
 					<button class="lightbox-control next" onclick="changeLightboxImage(1)">❯</button>
 				</div>
 			</section>
+
 
             <!-- Contact Section -->
             <section id="contact" class="section fade-in">
