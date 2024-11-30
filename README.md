@@ -18,7 +18,6 @@ Welcome to my personal portfolio website! This website showcases my projects, sk
 - **Node.js** (optional): If you’re using any server-side technologies.
 - **Bootstrap/Tailwind CSS**: For responsive design.
 - **Git**: Version control.
-- **Netlify/Vercel/GitHub Pages**: For deployment (mention the platform you're using to host your site).
 
 ## Contact
 You can reach me via:
