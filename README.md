@@ -23,4 +23,4 @@ Welcome to my personal portfolio website! This website showcases my projects, sk
 You can reach me via:
 - Email: [your.email@example.com](mailto:your.email@example.com)
 - LinkedIn: [https://www.linkedin.com/in/your-username/](https://www.linkedin.com/in/your-username/)
-- GitHub: [https://github.com/your-username](https://github.com/your-username)
+- GitHub: [[https://github.com/your-username](https://github.com/JustinLR)]([https://github.com/your-username](https://github.com/JustinLR))
