@@ -8,9 +8,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Additional initialization can go here
 });
-
-function showCategory(categoryId) {
-    const categories = document.querySelectorAll('.project-category');
-    categories.forEach(category => category.classList.remove('active'));
-    document.getElementById(categoryId).classList.add('active');
-}
